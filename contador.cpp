@@ -1,19 +1,43 @@
-#include<stdio.h>
-#include<string.h>
-main()
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
 {
-
-    char nome[30];
-    int indice tamanho = 0, cont = 0;
-    printf("\n\t INFORME UM NOME: ");
-    scanf ("%s", &nome);
-    tamanho = strlen(nome);
-    for (indice = 1; indice <= tamanho -1; indice++)
-    {
-        if (nome[indice] == 'a' || nome[indice] == 'A')
-        cont++;
+    int i, j, m[3][3];
+    
+    for (i=0; i<3; i++)
+    for(j=0;j<3;j++){
+        printf("Elemento [%d][%d]= ",i,j);
+        scanf("%d",&m[i][j]);
     }
-    printf("\n O nome %s ", (nome));
-    printf("tem %d letra a ", cont');
+    
+    //mostrar valores digitados
+    printf("\n Valores digitados \n");
+        for(i=0;i<3;i++){
+            
+            for(j=0;j<3;j++)
+            
+                printf("%d ",m[i][j]);
+                printf("\n");
+            
+        }
+        
+        //multiplica por 5
+        for(i=0;i<3;i++)
+        for(j=0;j<3;j++)
+        m[i][j]=m[i][j]*5;
+        
+        //Mostrar valores multiplicados
+        printf("\n Valores multiplicados por 5\n");
+        for(i=0;i<3;i++){
+            for(j=0;j<3;j++)
+            
+            printf("%d ",m[i][j]);
+            printf("\n");
+    
+        }
 
+    return 0;
 }

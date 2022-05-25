@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-main() {
+int main() {
     int menor, maior, aux;
     int par = 0;
 
